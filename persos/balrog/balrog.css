@@ -1,0 +1,104 @@
+.persoBalrog {
+  position: absolute;
+  top: 149px;
+  z-index: 2;
+  width: 40px;
+  height: 80px;
+  overflow: hidden;
+  background-image: url(./images/spriteBalrog.png);
+  background-position: -79px 0px;
+
+}
+
+.balrog-walk {
+  animation: balrogwalk 0.5s step-start infinite;
+}
+
+@keyframes balrogwalk {
+    0% {
+       background-position: -40px -1px;
+       height: 82px;
+    }
+    50% {
+       background-position: -119px -1px;
+       height: 82px;
+    }
+    100% {
+       background-position: -79px 0px;
+       height: 80px;
+    }
+}
+
+.balrog-jump {
+  animation: balrogjump 0.6s step-start infinite;
+}
+
+@keyframes balrogjump {
+  50% {
+     background-position: -140px -162px;
+     height: 57px;
+     width: 38px;
+     top: 140px;
+  }
+    100% {
+      background-position: -79px 0px;
+      height: 80px;
+      width: 40px;
+      top: 149px;
+    }
+
+
+}
+
+.balrog-punch-right {
+  animation: balrogpunchright 0.5s step-start infinite;
+}
+
+@keyframes balrogpunchright {
+    33% {
+      background-position: -79px 0px;
+      height: 80px;
+      width: 40px;
+      top: 149px;
+    }
+    66% {
+       background-position: -0px -230px;
+       height: 82px;
+       width: 66px;
+       top: 149px;
+    }
+    100% {
+      background-position: -0px -308px;
+      height: 72px;
+      width: 116px;
+      top: 159px;
+    }
+
+}
+
+
+.balrog-punch-left {
+  animation: balrogpunchleft 0.5s step-start infinite;
+}
+
+@keyframes balrogpunchleft {
+    33% {
+      background-position: -79px 0px;
+      height: 80px;
+      width: 40px;
+      top: 149px;
+    }
+    66% {
+       background-position: -116px -310px;
+       height: 77px;
+       width: 68px;
+       top: 152px;
+    }
+    100% {
+      background-position: -0px -380px;
+      height: 98px;
+      width: 80px;
+      top: 131px;
+    }
+
+}

@@ -1,0 +1,45 @@
+.screen-select-level {
+  position: absolute;
+  background-image: linear-gradient(#636161, rgba(0, 0, 0, 0.26)), url(images/fondEcranStageSelect.jpg);
+  border: 1px solid #606060;
+  background-size: cover;
+  background-position: center;
+  width: 424px;
+  height: 244px;
+  z-index: 2;
+  top: 119px;
+  left: 238px;
+  border-radius: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-around;
+}
+
+.title-stage-select {
+  padding-top: 20px;
+  text-shadow: 2px 4px 4px #191919;
+}
+
+.levels {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.levels img{
+  width: 130px;
+  height: 70px;
+  margin: 4px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  opacity: 0.7;
+  border: 1px solid #2b2828;
+}
+
+.levels img:hover {
+  border: 1px solid #ffffff;
+  opacity: 1;
+}

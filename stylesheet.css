@@ -1,0 +1,236 @@
+@import url("./levels/levels.css");
+@import url("./selectPlayers/selectPlayers.css");
+@import url("./persos/ryu/ryu.css");
+@import url("./persos/ken/ken.css");
+@import url("./persos/chunLi/chunLi.css");
+@import url("./persos/balrog/balrog.css");
+
+body{
+  background-image: url(images/backgroundBody.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+}
+
+h1, h2, h3, button {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-family: 'Press Start 2P', cursive;
+  margin: 0;
+}
+
+.titre {
+    margin: 20px auto 0px;
+    display: flex;
+}
+
+.titre img {
+  margin: 0 auto;
+  width: 500px;
+  height: 200px;
+}
+
+.persosFace img {
+  display: none;
+}
+
+
+.psp {
+  background-image: url('./images/psp.png');
+  z-index: 1;
+  position: relative;
+  background-size: 100%;
+  width: 900px;
+  height: 650px;
+  margin: -65px auto 0;
+  background-repeat: no-repeat;
+}
+
+.screen-accueil {
+  position: absolute;
+  background-image: url(images/fondEcranAccueil.jpg);
+  border: 1px solid #606060;
+  background-size: cover;
+  background-position: center;
+  width: 424px;
+  height: 244px;
+  z-index: 4;
+  top: 119px;
+  left: 238px;
+  border-radius: 4px;
+}
+
+.screen-accueil img {
+  width: 50%;
+  display: flex;
+  margin: 10px auto;
+}
+
+.screen-accueil button {
+  display: flex;
+  margin: 80px auto 10px;
+  padding: 12px 20px 10px;
+  background-color: #db1b18;
+  background-image: linear-gradient( #db1b18, rgba(200,200,200,0));
+  transition: background-color 1s;
+  border: 1px solid #ffb6b6;
+  border-radius: 3px;
+  cursor: pointer;
+  outline: none;
+  text-shadow: 2px 4px 4px #191919;
+  transition:text-shadow background-color 0.5s;
+}
+
+.screen-accueil button:hover {
+  background-color: #fb7a21;
+}
+
+
+.psp-screen {
+  position: absolute;
+  border: 1px solid #606060;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 424px;
+  height: 244px;
+  z-index: 1;
+  top: 119px;
+  left: 238px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+#timer {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 23px;
+  color: white;
+  position: absolute;
+  top: 44px;
+  left: 45%;
+  text-shadow: 2px 2px 0px #000000;
+}
+
+#timer span {
+  font-size: 23px;
+  top: 25px;
+  position: absolute;
+  left: -25px;
+}
+
+.align-text-timer {
+  transform: translateX(-35%) !important;
+}
+
+@keyframes blink {
+    0% { box-shadow: 0 0 22px #ffffff; }
+    25% { box-shadow: 0 0 15px #ffffff; }
+    50% { box-shadow: 0 0 12px #ffffff; }
+    75% { box-shadow: 0 0 17px #ffffff; }
+    100% { box-shadow: 0 0 25px #ffffff; }
+}
+
+@-webkit-keyframes blink {
+  0% { box-shadow: 0 0 22px #ffffff; }
+  25% { box-shadow: 0 0 15px #ffffff; }
+  50% { box-shadow: 0 0 12px #ffffff; }
+  75% { box-shadow: 0 0 17px #ffffff; }
+  100% { box-shadow: 0 0 25px #ffffff; }
+}
+
+.blink {
+    -webkit-animation: blink 3.0s ease-in-out infinite;
+    -moz-animation: blink 3.0s ease-in-out infinite;
+    -ms-animation: blink 3.0s ease-in-out infinite;
+    -o-animation: blink 3.0s ease-in-out infinite;
+    animation: blink 3.0s ease-in-out infinite;
+}
+
+.player1-position {
+  position: absolute;
+  left: 25px;
+}
+
+.player2-position {
+  position: absolute;
+  right: 38px;
+  transform: scaleX(-1);
+}
+
+.life-bar-p1 {
+  position: absolute;
+  width: 195px;
+  height: 14px;
+  top: 15px;
+  left: 10px;
+  background: linear-gradient(#f5f520, #ff9200);
+  z-index: 2;
+  border-radius: 6px;
+  border: 1px solid #292929;
+  box-shadow: 3px 2px 4px 1px #2f2f2f;
+  overflow: hidden;
+}
+
+.death-bar-p1 {
+  position: absolute;
+  height: 14px;
+  top: 0px;
+  right: 0px;
+  background: linear-gradient(#ff1515, #cc0000);
+  z-index: 3;
+  border-left: 1px solid #292929;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.life-bar-p2 {
+  position: absolute;
+  width: 195px;
+  height: 14px;
+  top: 15px;
+  right: 10px;
+  background: linear-gradient(#f5f520, #ff9200);
+  z-index: 2;
+  border-radius: 6px;
+  border: 1px solid #292929;
+  box-shadow: -3px 2px 4px 1px #2f2f2f;
+  overflow: hidden;
+  transform: scaleX(-1);
+}
+
+.death-bar-p2 {
+  position: absolute;
+  height: 14px;
+  top: 0px;
+  right: 0px;
+  background: linear-gradient(#ff1515, #cc0000);
+  z-index: 3;
+  border-left: 1px solid #292929;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.position-name-player-one {
+  position: absolute;
+  top: 26px;
+  left: 15px;
+}
+
+.position-name-player-two {
+  position: absolute;
+  top: 26px;
+  right: 13px;
+}
+
+.style-fighter-name {
+  color: #ffffff;
+  font-weight: bold;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 15px;
+  text-shadow: 2px 2px 0px #000000;
+}
+
+.noSelectedPlayer {
+  display: none;
+}

@@ -1,0 +1,35 @@
+.persoChunLi {
+  position: absolute;
+  top: 146px;
+  z-index: 2;
+  width: 48px;
+  height: 80px;
+  overflow: hidden;
+  background-image: url(./images/spriteChunLi.png);
+  background-position: -44px 13px;
+}
+
+.chunli-walk {
+  animation: chunliwalk 0.5s step-start infinite;
+}
+
+@keyframes chunliwalk {
+  10% {
+     background-position: -135px 0px;
+     height: 67px;
+     width: 44px;
+     top: 163px;
+  }
+  50% {
+     background-position: -91px 13px;
+     height: 80px;
+     width: 43px;
+     top: 146px;
+  }
+  100% {
+     background-position: -135px 0px;
+     height: 67px;
+     width: 44px;
+     top: 163px;
+  }
+}

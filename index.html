@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon"  href="images/iconBlanka.png">
+    <title>Street fighter</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="titre">
+      <img src="images/titre02.png" alt="">
+    </div>
+    <div class="psp">
+
+      <!-- ECRAN ACCUEIL -->
+      <div class="screen-accueil accueil">
+        <audio id="musicSelectPlayer" src="sounds/playerSelect.mp3" autoplay loop>
+        </audio>
+        <img src="images/titre02.png" alt="street fighter" class="active">
+        <button class="js-button active" type="button" name="fight">START</button>
+      </div>
+      <!-- ECRAN ACCUEIL -->
+
+      <!-- SELECT PERSO -->
+      <div class="screen-select-player">
+        <h2 class="title-player-select">Select Player 1</h2>
+        <div class="players">
+          <img id="fighter01" class="player" src="./persos/ryu/images/ryuFace.gif" alt="Ryu">
+          <img id="fighter02" class="player" src="./persos/ken/images/kenFace.gif" alt="Ken">
+          <img id="fighter03" class="player" src="./persos/chunLi/images/chunliFace.gif" alt="ChunLi">
+          <img id="fighter04" class="player" src="./persos/balrog/images/balrogFace2.gif" alt="Balrog">
+        </div>
+        <div id="animPreFight">
+          <img class="prefight-fight" src="./selectPlayers/images/fight.png" alt="">
+        </div>
+        <div class="playersSelected">
+
+        </div>
+      </div>
+      <!-- //SELECT PERSO -->
+
+      <!-- SELECT STAGE -->
+      <div class="screen-select-level">
+        <h2 class="title-stage-select">Stage Select</h2>
+        <div class="levels">
+          <audio id="soundStage" autoplay loop>
+          </audio>
+          <img id="01" src="./levels/images/arene01.gif" alt="arene01" class="js-arene">
+          <img id="02" src="./levels/images/arene02.gif" alt="arene02" class="js-arene">
+          <img id="03" src="./levels/images/arene03.gif" alt="arene03" class="js-arene">
+          <img id="04" src="./levels/images/arene04.gif" alt="arene04" class="js-arene">
+          <img id="05" src="./levels/images/arene05.gif" alt="arene05" class="js-arene">
+          <img id="06" src="./levels/images/arene06.gif" alt="arene06" class="js-arene">
+        </div>
+      </div>
+      <!-- //SELECT STAGE -->
+
+      <div id="js-background" class="psp-screen blink">
+        <audio id="soundFight" autoplay >
+        </audio>
+        <div id="timer">
+        </div>
+
+      <!-- RYU -->
+        <div id="ryu" class="noSelectedPlayer">
+            <div id="js-lifebar-ryu">
+              <div id="js-deathbar-ryu">
+              </div>
+            </div>
+            <p class="style-fighter-name">RYU</p>
+            <div id="js-persoRyu" class="persoRyu">
+            </div>
+            <div class="boule-de-feu hadouken">
+            </div>
+        </div>
+      <!-- //RYU -->
+
+      <!-- KEN -->
+        <div id="ken" class="noSelectedPlayer">
+            <div id="js-lifebar-ken">
+              <div id="js-deathbar-ken">
+              </div>
+            </div>
+            <p class="style-fighter-name">KEN</p>
+            <div id="js-persoKen" class="persoKen" >
+            </div>
+            <div class="fireBall-ken">
+            </div>
+        </div>
+      <!-- //KEN -->
+
+      <!-- CHUN-LI -->
+        <div id="chunli" class="noSelectedPlayer">
+            <div id="js-lifebar-chunli">
+              <div id="js-deathbar-chunli">
+              </div>
+            </div>
+            <p class="style-fighter-name">CHUN-LI</p>
+            <div id="js-persoChunLi" class="persoChunLi">
+            </div>
+        </div>
+      <!-- //CHUN-LI -->
+
+      <!-- BALROG-->
+        <div id="balrog" class="noSelectedPlayer">
+            <div id="js-lifebar-balrog">
+              <div id="js-deathbar-balrog">
+              </div>
+            </div>
+            <p class="style-fighter-name">BALROG</p>
+            <div id="js-persoBalrog" class="persoBalrog">
+            </div>
+        </div>
+      <!-- //BALROG-->
+
+
+      </div>
+    </div>
+
+
+    <div id="scripts-js">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <script type="text/javascript" src="index.js"></script>
+      <script type="text/javascript" src="./levels/levels.js"></script>
+      <script type="text/javascript" src="./selectPlayers/selectPlayers.js"></script>
+    </div>
+  </body>
+</html>

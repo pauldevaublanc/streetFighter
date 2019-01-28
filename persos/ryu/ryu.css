@@ -1,0 +1,22 @@
+.persoRyu {
+    top: 115px;
+    z-index: 2;
+    width: 70px;
+    height: 118px;
+    overflow: hidden;
+    background-image: url('./images/sprite.png');
+    background-position: -8px 13px;
+}
+
+.boule-de-feu {
+  position: absolute;
+  top: 116px;
+  left: 51px;
+  z-index: 2;
+  width: 35px;
+  height: 75px;
+  overflow: hidden;
+  background-image: url(./images/sprite.png);
+  background-position: -336px 8px;
+  display: none;
+}
